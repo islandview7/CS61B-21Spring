@@ -1,0 +1,83 @@
+---Video3a-compilation---
+Why makes a class file at all?
+1.Class file has been type checked.Distributed code is safer.
+2.Class files are 'simpler' for machine to execute.Ditributed code is faster.
+3.Minor benefit:Protects your intellectual property.No need to give out sourve.
+
+
+---Video2a-defining and instantiating classes---
+Every method(function) is associated with some class.
+To run a class,we must define a main method.
+Not all classes have a main method.
+
+
+---Video2b-defining and instantianing classes---
+Classes can contain not just functions,but also data.
+
+We'll create a single dog class,and then create instances of this dog.
+The class provides a blueprint that all dog objects will follow.
+
+Dog.java & doglauncher.java     dependency
+
+
+---Video2c-terminology---
+Declaration-Instantiation-Assignment
+The dot notation meaans that we want to use a method or variable belonging to hugedog,or more succinctly,a member of hugedog.
+
+
+---Video2d-arrays of objects---
+1.use the new keyword to create the array
+2.use new again for each object that you want to put in the array
+
+Eg.dog[] dogs = new dog[2];
+      dog[0]=new dog(8);
+      dog[1]=new dog(20);
+      dog[0].makeNoise();
+
+
+---Video3a-static vs instatnce methods---
+1.Static methods are invoked using the class name, e.g. Dog.makeNoise();
+2.Instance methods are invoked using an instance name, e.g. maya.makeNoise();
+3.Static methods can’t access “my” instance variables, because there is no “me”.
+
+Static members are accessed using class name, e.g. Dog.binomen.
+Non-static members cannot be invoked using class name: Dog.makeNoise()(wrong)
+
+
+---Video3b-exercise---
+public class DogLoop {
+    public static void main(String[] args) {
+   		Dog smallDog = new Dog(5);
+   		Dog mediumDog = new Dog(25);
+   		Dog hugeDog = new Dog(150);
+ 
+   		Dog[] manyDogs = new Dog[4];  
+        manyDogs[0] = smallDog;
+   		manyDogs[1] = hugeDog;    	   
+        manyDogs[2] = new Dog(130);
+ 
+   		int i = 0;
+   		while (i < manyDogs.length) {
+       		Dog.maxDog(manyDogs[i], mediumDog).makeNoise();
+       		i = i + 1;
+        }
+    }
+}
+
+
+---Video3c-exercise solution---
+Java visualizer   http://goo.gl/HLzN6s
+
+
+---Video4-public static void main---
+Stack overflow:int num3 = Integer.parseInt(String.valueOf(ch))   将字符转换为数字
+
+
+---Video5-using libraries---
+The built-in java libraries:Math.String.Integer.List.Map
+The princeton standard library(StdDraw.StdAudio.In)
+
+Best ways to learn how to use an unfamiliar library:
+1.find a tutorial(youtube…)for the library
+2.read the documentation for the library
+3.look at example code snippets that use the library
