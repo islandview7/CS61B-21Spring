@@ -1,4 +1,4 @@
----dog---
+---proj1 dog---
 public class lecture02_dog {
     public int weightInPounds;
     public static String binomen="Canis familiaris";
@@ -34,7 +34,7 @@ public class lecture02_dog {
 }
 
 
----doglauncher---
+---proj2 doglauncher---
 public class lecture02_doglauncher {
     public static void main(String[] args){
         lecture02_dog d=new lecture02_dog(15);
@@ -50,7 +50,7 @@ public class lecture02_doglauncher {
 }
 
 
----argsdemo---
+---proj3 argsdemo---
 public class lecture02_argsdemo {
     public static void main(String[] args){
         System.out.println(args[0]);
@@ -58,7 +58,7 @@ public class lecture02_argsdemo {
 }
 
 
----agssum---
+---proj4 agssum---
 public class lecture02_argssum {
     public static void main(String[] args){
         int n=args.length;
