@@ -1,0 +1,32 @@
+---proj1 helloworld---
+public class lecture01_helloworld {
+    public static void main(String[] args){
+        System.out.println("hello world");
+    }
+}
+
+---proj2 hellonumbers---
+public class lecture01_hellonumbers {
+    public static void main(String[] args){
+        int x;  //declare x exists and is an integer
+        x=0;
+        while(x<10) {
+            System.out.println(x);
+            x = x + 1;
+        }
+    }
+}
+
+---proj3 largerdemo---
+public class lecture01_largerdemo {
+    public static int larger(int x,int y){
+        if(x>y){
+            return x;
+        }
+        return y;
+    }
+
+    public static void main(String[] args){
+        System.out.println(larger(5,-10));
+    }
+}
