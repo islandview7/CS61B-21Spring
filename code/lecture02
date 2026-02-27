@@ -1,0 +1,73 @@
+---dog---
+public class lecture02_dog {
+    public int weightInPounds;
+    public static String binomen="Canis familiaris";
+
+    public lecture02_dog(int w){
+        weightInPounds=w;
+    }
+
+    public void makeNoise(){
+        if(weightInPounds<10){
+            System.out.println("Yip!");
+        }else if(weightInPounds<30){
+            System.out.println("Bark!");
+        }else{
+            System.out.println("Woooof!");
+        }
+    }
+
+    public static lecture02_dog maxdog(lecture02_dog d1,lecture02_dog d2){
+        if (d1.weightInPounds>d2.weightInPounds){
+            return d1;
+        }
+        return d2;
+    }
+
+    public lecture02_dog maxdog(lecture02_dog d2) {
+        if (weightInPounds > d2.weightInPounds) {
+            return this;
+        }
+        return d2;
+    }
+
+}
+
+
+---doglauncher---
+public class lecture02_doglauncher {
+    public static void main(String[] args){
+        lecture02_dog d=new lecture02_dog(15);
+        lecture02_dog d2=new lecture02_dog(100);
+        //lecture02_dog bigger=lecture02_dog.maxdog(d,d2);
+        lecture02_dog bigger=d.maxdog(d2);
+        bigger.makeNoise();
+
+        //System.out.println(d.binomen);
+        //System.out.println(d2.binomen);
+        System.out.println(lecture02_dog.binomen);
+    }
+}
+
+
+---argsdemo---
+public class lecture02_argsdemo {
+    public static void main(String[] args){
+        System.out.println(args[0]);
+    }
+}
+
+
+---agssum---
+public class lecture02_argssum {
+    public static void main(String[] args){
+        int n=args.length;
+        int i=0;
+        int sum=0;
+        while(i<n){
+            sum=sum+Integer.parseInt(args[i]);
+            i=i+1;
+        }
+        System.out.println(sum);
+    }
+}
